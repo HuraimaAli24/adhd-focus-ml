@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
-# Load data
-df = pd.read_csv("data/focus_data.csv")
+df = pd.read_csv("focus_data.csv")
+
 
 X = df[
     [
@@ -50,4 +50,5 @@ if st.button("Analyze Focus"):
         st.warning("High task switching tendency")
     else:
         st.success("Good focus pattern detected")
+
 
